@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "speechsyn"
+version = "0.0.1"
+description = "Speech Synthesizer"
+authors = [
+    "Oleg Sokolov <sokolegg@yandex.ru>"
+]
+readme = "README.md"
+keywords = ["AI", 'NLP']
+
+classifiers = [
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+# Requirements
+[tool.poetry.dependencies]
+python = "^3.6"
+tensorflow = ">=1.12.0"
+keras = ">=2.3.1"
+numpy = ">= 1.11.0"
+
+[tool.poetry.scripts]
+speechsyn = "speechsyn.synthesize:main"
