@@ -7,7 +7,7 @@ https://www.github.com/kyubyong/tacotron
 
 from __future__ import print_function
 
-from hyperparams import Hyperparams as hp
+from speechsyn.hyperparams import Hyperparams as hp
 import numpy as np
 import tensorflow as tf
 from utils import *
@@ -65,7 +65,7 @@ def load_data(mode="train"):
     else:
         # Parse
         lines = codecs.open(hp.test_data, 'r', 'utf-8').readlines()[1:]
-        load_from_lines(lines)
+        return load_from_lines(lines)
 
 
 def load_from_lines(lines):
@@ -78,13 +78,15 @@ def load_from_lines(lines):
     maxlen = sorted(lengths, reverse=True)[0]
     texts = np.zeros((len(sents), maxlen), np.int32)
     for i, sent in enumerate(sents):
+        sent = sent.replace('\n', '')
+        print(sent)
         texts[i, :len(sent)] = [char2idx[char] for char in sent]
     return texts, maxlen
 
 
 def get_batch():
     """Loads training data and put them in queues"""
-    with tf.device('/cpu:0'):
+    with tf.device('/gpu:0'):
         # Load data
         fpaths, text_lengths, texts = load_data()  # list
         maxlen, minlen = max(text_lengths), min(text_lengths)

@@ -14,9 +14,7 @@ build:
 	# install poetry (python package builder)
 	@$(python) -m pip install poetry
 	# update db or csv
-	@rm -rf data
-	@mkdir data
-	@sh upload_data.sh
+	# @sh upload_data.sh
 	@$(poetry) build
 
 install: build
@@ -27,6 +25,7 @@ test: install
 	# $(python) tests/test.py
 
 run: test
-	$(python) speechsyn/synthesize.py
+	@$(python) speechsyn/synthesize.py
+
 .PHONY: lint test build install run
 

@@ -7,12 +7,12 @@ https://www.github.com/kyubyong/tacotron
 
 from __future__ import print_function
 
-from hyperparams import Hyperparams as hp
+from speechsyn.hyperparams import Hyperparams as hp
 import numpy as np
-from data_load import load_data
+from speechsyn.data_load import load_data
 import tensorflow as tf
-from train import Graph
-from utils import load_spectrograms
+from speechsyn.train import Graph
+from speechsyn.utils import load_spectrograms
 
 
 def eval(): 

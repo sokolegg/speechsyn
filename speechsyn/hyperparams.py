@@ -41,7 +41,7 @@ class Hyperparams:
     data = "/data/public/rw/speech/{}".format(lang)
     #data = "/data/private/voice/LJSpeech-1.0"
     #test_data = 'harvard_sentences.txt'
-    test_data = '../MOS/sents/{}.txt'.format(lang)
+    test_data = './MOS/sents/{}.txt'.format(lang)
     max_duration = 10.0
 
     # signal processing
@@ -53,7 +53,7 @@ class Hyperparams:
     win_length = int(sr*frame_length) # samples.
     n_mels = 80 # Number of Mel banks to generate
     power = 1.2 # Exponent for amplifying the predicted magnitude
-    n_iter = 50 # Number of inversion iterations
+    n_iter = 100 # Number of inversion iterations
     preemphasis = .97 # or None
     max_db = 100
     ref_db = 20

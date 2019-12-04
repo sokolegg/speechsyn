@@ -6,7 +6,7 @@ https://www.github.com/kyubyong/dc_tts
 '''
 from __future__ import print_function, division
 
-from hyperparams import Hyperparams as hp
+from speechsyn.hyperparams import Hyperparams as hp
 import numpy as np
 import tensorflow as tf
 import librosa

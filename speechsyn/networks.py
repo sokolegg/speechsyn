@@ -7,8 +7,8 @@ https://www.github.com/kyubyong/tacotron
 
 from __future__ import print_function
 
-from hyperparams import Hyperparams as hp
-from modules import *
+from speechsyn.hyperparams import Hyperparams as hp
+from speechsyn.modules import *
 import tensorflow as tf
 
 

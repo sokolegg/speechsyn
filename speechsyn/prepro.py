@@ -8,12 +8,12 @@ https://www.github.com/kyubyong/tacotron
 from __future__ import print_function
 
 from multiprocessing import Process, Pool
-from utils import load_spectrograms
+from speechsyn.utils import load_spectrograms
 import os
-from data_load import load_data
+from speechsyn.data_load import load_data
 import numpy as np
 import tqdm
-from hyperparams import Hyperparams as hp
+from speechsyn.hyperparams import Hyperparams as hp
 from tqdm import *
 
 NUM_JOBS = 4

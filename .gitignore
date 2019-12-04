@@ -1,6 +1,6 @@
 # Data Folder
 ru/
-speechsyn/tacotron/ru/
+speechsyn/ru/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
