@@ -7,7 +7,7 @@ https://www.github.com/kyubyong/tacotron
 
 from __future__ import print_function
 
-from speechsyn.hyperparams import Hyperparams as hp
+from speechsyn.hyperparams import hyperparams as hp
 import numpy as np
 import tensorflow as tf
 from utils import *
@@ -80,6 +80,7 @@ def load_from_lines(lines):
     for i, sent in enumerate(sents):
         sent = sent.replace('\n', '')
         print(sent)
+        print(char2idx)
         texts[i, :len(sent)] = [char2idx[char] for char in sent]
     return texts, maxlen
 

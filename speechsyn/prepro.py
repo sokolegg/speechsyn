@@ -13,7 +13,7 @@ import os
 from speechsyn.data_load import load_data
 import numpy as np
 import tqdm
-from speechsyn.hyperparams import Hyperparams as hp
+from speechsyn.hyperparams import hyperparams as hp
 from tqdm import *
 
 NUM_JOBS = 4

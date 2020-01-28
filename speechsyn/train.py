@@ -8,7 +8,7 @@ https://www.github.com/kyubyong/tacotron
 from __future__ import print_function
 
 import os
-from speechsyn.hyperparams import Hyperparams as hp
+from speechsyn.hyperparams import hyperparams as hp
 import tensorflow as tf
 from tqdm import tqdm
 from data_load import get_batch, load_vocab

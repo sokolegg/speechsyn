@@ -1,3 +1,4 @@
+# russian
 rm -rf ru
 mkdir ru 
 cd ru
