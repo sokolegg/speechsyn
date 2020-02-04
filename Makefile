@@ -27,7 +27,6 @@ test: install
 run: test
 	@$(python) speechsyn/speaker.py ru привет
 	@$(python) speechsyn/speaker.py jp konichiwa
-	@$(python) speechsyn/speaker.py zh konichiwa
 
 .PHONY: lint test build install run
 
