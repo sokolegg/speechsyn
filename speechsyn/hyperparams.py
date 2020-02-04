@@ -38,7 +38,7 @@ class Hyperparams:
     
         self.data = "data/public/rw/speech/{}".format(lang)
         self.test_data = 'data/MOS/sents/{}.txt'.format(lang)
-        self.max_duration = 10.0
+        self.max_duration = 20.0
 
         # signal processing
         self.sr = 22050 # Sample rate.
